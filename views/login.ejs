@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log in</title>
+    <style rel='stylesheet' type="text/css" media='screen'>
+      body{
+        background-color: #373d40;
+      }
+      h1 {
+        color: #f09605;
+        font-size: 3rem;
+        font-weight: 50;
+        text-align: center;
+        margin: 1rem 0 3rem; 
+        font-family: 'Hind', sans-serif;
+        }
+      form{
+        width: 600px;
+        margin: 200px auto;
+      }
+      div{
+        width: 100%;
+        margin: 15px auto;
+      }
+      label{
+        display: block;
+        padding: 20px;
+        font-size: 25px;
+      }
+      input{
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #797979;
+        font-size: 20px;
+        margin-left: 20px;
+        border-radius: 3px;
+      }
+      button{
+        margin: 20px;
+        padding: 10px;
+        width: 100px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bold;
+        color: whitesmoke;
+        background:#f09605;
+      }
+      span{
+        display: block;
+        margin-left: 20px;
+        color: red;
+        font-style: 'Hind', sans-serif;
+      }
+      label{
+        color: whitesmoke;
+        font-family: 'Hind',sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Community Complaint Panel</h1>
+
+
+    <form action="/login" method="POST">
+      <div>
+        
+        <label for="username">Username</label>
+        <input type="text" name="username" placeholder="username">
+        <span></span>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="password">
+        <span></span>
+      </div>
+      <button id="log-in">Log-in</button>
+
+      
+    </form>
+  </body>
+</html>
+

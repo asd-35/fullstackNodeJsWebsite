@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Report</title>
+        <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+        <style type="text/css">
+            
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+body {
+    font-family: 'Hind';
+}
+header{
+    display: flex;
+    background-color: #f09605;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+    align-items: center;
+}
+.title{
+    color: #f09605;
+}
+span{
+    color:white;
+}
+.logo-container{
+    background-color:  #f09605;
+    flex: 0.5;
+}
+nav{
+    flex: 2;
+    
+}
+.nav-links{
+    
+    display: flex;
+    justify-content: space-around;
+    background-color:  #f09605;
+}
+ a{
+    background:#f09605;
+}
+
+
+.small-container{
+    margin-top: 80px;
+    display: flex;
+    width: 90%;
+    margin:auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.col2 img{
+    padding-right: 5vh;
+    height: 60vh;
+}
+.Complaint{
+    color: white;
+    flex: 1;
+    align-content: center;
+}
+.Complaint h1{
+    margin-bottom: 2vh;
+    font-size: 44px;
+    font-weight: 500;
+   color: #f09605;
+}
+.btn {
+    border: 2px solid black;
+    background-color: black;
+    border-color: #ff9800;
+    color: orange;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  
+  .btn:hover {
+    background: #ff9800;
+    color: white;
+  }
+        </style>
+    </head>
+
+    
+
+    
+    <body>
+        
+        <header>
+            <div class="logo-container">
+                <h1><span class="title">COMPLAINT</span>List</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                   <a href="/">Home</a>
+                    
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="small-container">
+                <div class="col2">
+                
+                    <img src="data:image/png;base64,<%=report.image['data'] %>"alt="Complaint">
+                </div>
+                <div class="Complaint">
+                    <h1>Complaint</h1>
+                    <h3> <%=report.description %></h3>
+                    <select name="Which department">
+                        <option >Cleaning Workers</option>
+                        <option >Fire Departmant</option>
+                    </select>
+                    <div style="display:inline-block;float: right;"><form method="POST"><button class="btn mark" href="report/<%=report._id%>">
+                    Mark as solved</button></form>
+                    <button class="btn call">Call the department</button></div>
+                    
+                    
+                </div>
+            </div>
+        </main>
+    </body>
+    
+</html>
